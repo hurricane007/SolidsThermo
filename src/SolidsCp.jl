@@ -1,11 +1,11 @@
 # return the heat capacity of substance, kJ/mol*K
 function SolidsCp(subName::String, Temp::Real)
     try
-        Trange, coeff = solidEnthalpyData[subName]
+        Trange, coeff = solidThermoData[subName]
         if Temp > Trange[end] || Temp < Trange[1]
             printstyled(color=:red,
-                @sprintf("%4.4f K is out of range, %4.2f K - %4.2f K \n",
-                Temp, Trange[1], Trange[end]))
+                @sprintf("For %s, %4.4f K is out of range, %4.2f K - %4.2f K \n",
+                subName, Temp, Trange[1], Trange[end]))
             return NaN
         else
             T = Temp*1E-3
@@ -19,5 +19,5 @@ function SolidsCp(subName::String, Temp::Real)
 end
 
 function SolidsCp()
-    println(keys(solidEnthalpyData))
+    println(keys(solidThermoData))
 end
