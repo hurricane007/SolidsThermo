@@ -2,7 +2,7 @@ function Mm(subName::String)
     try
         return molarMassData[subName]
     catch
-        println("Cannot fin $subName")
+        println("Cannot find $subName")
     end
 end
 
