@@ -1,6 +1,6 @@
 # Thermodynamic data of gas
 
-"return the enthalpy of substance, '[KJ/mol]'"
+"return the enthalpy of substance, '[KJ/mol]"
 function GasEnthalpy(subName::String, Temp::Real)
     try
         Trange, coeff = gasThermoData[subName]
