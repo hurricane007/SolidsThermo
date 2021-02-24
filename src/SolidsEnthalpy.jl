@@ -1,5 +1,7 @@
-#include("data.jl")
-# return the enthalpy of substance, [KJ/mol]
+"""
+return the enthalpy of substance, [KJ/mol]\n
+
+"""
 function SolidsEnthalpy(subName::String, Temp::Real)
     try
         Trange, coeff = solidThermoData[subName]

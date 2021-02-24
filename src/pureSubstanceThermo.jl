@@ -6,4 +6,7 @@ module pureSubstanceThermo
     include("SolidsEntropy.jl")
     include("GasThermo.jl")
     include("MolarMass.jl")
+    export GasEntropy, GasEnthalpy, GasCp
+    export SolidsCp, SolidsEntropy, SolidsEnthalpy
+    export Mm
 end  # module SolidsThermo

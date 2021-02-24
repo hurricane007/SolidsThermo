@@ -1,8 +1,6 @@
 # Thermodynamic data of gas
 
-#=
-return the enthalpy of substance, '[KJ/mol]'
-=#
+"return the enthalpy of substance, '[KJ/mol]'"
 function GasEnthalpy(subName::String, Temp::Real)
     try
         Trange, coeff = gasThermoData[subName]
@@ -26,8 +24,7 @@ function GasEnthalpy()
     println(keys(gasThermoData))
 end
 
-``` return the entropy of substance, [kJ/mol*K]
-```
+" return the entropy of substance, [kJ/mol*K]"
 function GasEntropy(subName::String, Temp::Real)
     try
         Trange, coeff = gasThermoData[subName]
@@ -51,8 +48,8 @@ function GasEntropy()
     println(keys(gasThermoData))
 end
 
-``` return the heat capacity of substance, kJ/mol*K
-```
+"return the heat capacity of substance, kJ/mol*K"
+
 function GasCp(subName::String, Temp::Real)
     try
         Trange, coeff = gasThermoData[subName]
